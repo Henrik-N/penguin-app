@@ -10,6 +10,7 @@ The package also includes an optional feature adding a time resource plugin, ena
 ```toml
 [dependencies]
 penguin-app = { git = "https://github.com/Henrik-N/penguin-app", features = ["time-plugin"] }
+penguin-config = { git = "https://github.com/Henrik-N/penguin-config" }
 ```
 
 ## Configuration
