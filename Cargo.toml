@@ -13,8 +13,8 @@ time-plugin = []
 [dependencies]
 # ----- Workspace ----- #
 [dependencies.penguin-config]
-git = "https://github.com/Henrik-N/penguin-config"
-# path = "../../penguin-config"
+# git = "https://github.com/Henrik-N/penguin-config"
+path = "../../penguin-config"
 features = ["derive"]
 [dependencies.serde]
 version = "1.0"
