@@ -26,7 +26,7 @@ impl PenguinConfig for AppConfig {
 
 
 #[derive(Debug, Deserialize, PenguinConfigFile)]
-#[penguin_config_file_path(path = "app-config.json")]
+#[penguin_config(path = "app-config.json")]
 pub struct AppConfigDeserializable {
     pub logger_config: LoggerConfigDeserializable,
     pub window_config: WindowConfig,
