@@ -1,0 +1,47 @@
+[package]
+name = "penguin-app"
+version = "0.1.0"
+authors = ["Henrik Nilsson <github.com/Henrik-N> <n.henrik.g.nilsson@gmail.com>"]
+edition = "2021"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+time-plugin = []
+
+[dependencies]
+# ----- Workspace ----- #
+[dependencies.penguin-config]
+git = "https://github.com/Henrik-N/penguin-config"
+# path = "../../penguin-config"
+features = ["derive"]
+[dependencies.serde]
+version = "1.0"
+
+# ----- Errors ----- #
+[dependencies.anyhow]
+version = "~1.0.51"
+features = ["backtrace"]
+
+
+# ----- ECS ----- #
+[dependencies.legion]
+ersion = "0.4.0"
+
+
+# ----- Utility ----- #
+[dependencies.chrono] # time
+version = "0.4"
+
+
+# ----- Logging ----- #
+[dependencies.log]
+version = "0.4"
+[dependencies.fern]
+version = "0.5"
+features = ["colored"]
+
+# ----- Window creation ----- #
+[dependencies.winit]
+version = "0.22.2" # cross-platform window creation and management
