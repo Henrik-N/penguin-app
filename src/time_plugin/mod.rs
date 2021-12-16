@@ -26,16 +26,16 @@ impl Plugin for TimePlugin {
 }
 
 #[system]
-fn tick(#[resource] time: &mut PTime) {
+fn tick(#[resource] time: &mut Time) {
     time.tick();
 }
 
 #[derive(Debug)]
-pub struct PTime {
+pub struct Time {
     previous_frame_time: Instant,
     delta_time: Duration,
 }
-impl Default for PTime {
+impl Default for Time {
     fn default() -> Self {
         Self {
             previous_frame_time: Instant::now(),
@@ -44,7 +44,7 @@ impl Default for PTime {
     }
 }
 
-impl PTime {
+impl Time {
     pub fn delta(&self) -> f32 {
         self.delta_time.as_secs_f32()
     }
