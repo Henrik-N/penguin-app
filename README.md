@@ -14,7 +14,7 @@ penguin-config = { git = "https://github.com/Henrik-N/penguin-config" }
 ```
 
 ## Configuration
-Create an app-config.json file like this and put in your project root directory. Available logger levels are ["error", "warning", "info", "debug", "trace"] in decending order of importance. Log messages are generated with the standard [log](https://github.com/rust-lang/log) calls (such as ```log::error!("")```).
+Create an app-config.json file like this and put in your project root directory. Available logger levels are ["error", "warning", "info", "debug", "trace"] in decending order of importance. 
 
 #### app-config.json
 
@@ -33,10 +33,12 @@ Create an app-config.json file like this and put in your project root directory.
 
 
 ## Usage
+### Log
+Log messages are generated with the standard [log](https://github.com/rust-lang/log) function calls, such as ```log::error!("message")```.
 ### App
 ```rust
 use penguin_config::PenguinConfig;
-use penguin_app::{App, AppBuilder, config::AppConfig};
+use penguin_app::{App, config::AppConfig};
 
 fn main() {
     App::builder(AppConfig::read_config())
