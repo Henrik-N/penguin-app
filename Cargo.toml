@@ -1,47 +1,36 @@
 [package]
-name = "penguin-app"
+name = "penguin-application"
 version = "0.1.0"
 authors = ["Henrik Nilsson <github.com/Henrik-N> <n.henrik.g.nilsson@gmail.com>"]
 edition = "2021"
+license = "MIT"
+description = "Appbuilder and abstraction layer for building applications using legion ECS."
+repository = "https://github.com/Henrik-N/penguin-app"
 
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "penguin_app"
 
 [features]
 time-plugin = []
 
 [dependencies]
 # ----- Workspace ----- #
-[dependencies.penguin-config]
-git = "https://github.com/Henrik-N/penguin-config"
-
-features = ["derive"]
-[dependencies.serde]
-version = "1.0"
+penguin-config = { version = "0.1" }
+serde = { version = "1.0" }
 
 # ----- Errors ----- #
-[dependencies.anyhow]
-version = "~1.0.51"
-features = ["backtrace"]
-
+anyhow = { version = "1.0", features = ["backtrace"] }
 
 # ----- ECS ----- #
-[dependencies.legion]
-ersion = "0.4.0"
-
+legion = { version = "0.4.0" }
 
 # ----- Utility ----- #
-[dependencies.chrono] # time
-version = "0.4"
-
+chrono = { version = "0.4" } # time
 
 # ----- Logging ----- #
-[dependencies.log]
-version = "0.4"
-[dependencies.fern]
-version = "0.5"
-features = ["colored"]
+log = { version = "0.4" }
+fern = { version = "0.5", features = ["colored"] }
 
 # ----- Window creation ----- #
-[dependencies.winit]
-version = "0.22.2" # cross-platform window creation and management
+winit = { version = "0.22.2" } # cross-platform window creation and management
+
