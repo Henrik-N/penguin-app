@@ -8,7 +8,7 @@ pub struct TimePlugin;
 
 impl Plugin for TimePlugin {
     fn startup(&mut self, resources: &mut Resources) -> Vec<Step> {
-        resources.insert(PTime::default());
+        resources.insert(Time::default());
 
         vec![]
     }
