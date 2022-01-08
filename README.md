@@ -9,7 +9,7 @@ The package also includes an optional feature adding a time resource plugin, ena
 #### Cargo.toml
 ```toml
 [dependencies]
-penguin-application = { version = "0.1" }
+penguin-application = { version = "0.1", features = ["time-plugin"]}
 penguin-config = { version = "0.1" }
 ```
 
